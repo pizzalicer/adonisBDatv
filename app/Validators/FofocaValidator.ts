@@ -36,5 +36,4 @@ export default class FofocaValidator {
    * }
    *
    */
-  public messages: CustomMessages = {}
 }
