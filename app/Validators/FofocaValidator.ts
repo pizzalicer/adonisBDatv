@@ -24,17 +24,6 @@ export default class FofocaValidator {
    *     ])
    *    ```
    */
-  public schema = schema.create({
-    tema: schema.string({}, [
-      rules.required()
-    ]),
-    mensagem: schema.string({}, [
-      rules.required()
-    ]),
-    data: schema.date({}, [
-      rules.required()
-    ]),
-  })
 
   /**
    * Custom messages for validation failures. You can make use of dot notation `(.)`
