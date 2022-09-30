@@ -22,17 +22,7 @@ import Server from '@ioc:Adonis/Core/Server'
 */
 Server.middleware.register([
   () => import('@ioc:Adonis/Core/BodyParser'),
-  public schema = schema.create({
-    tema: schema.string({}, [
-      rules.required()
-    ]),
-    mensagem: schema.string({}, [
-      rules.required()
-    ]),
-    data: schema.date({}, [
-      rules.required()
-    ]),
-  })
+
 ])
 
 /*

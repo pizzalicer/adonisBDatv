@@ -24,7 +24,17 @@ export default class FofocaValidator {
    *     ])
    *    ```
    */
-
+  public schema = schema.create({
+    tema: schema.string({}, [
+      rules.required()
+    ]),
+    mensagem: schema.string({}, [
+      rules.required()
+    ]),
+    data: schema.date({}, [
+      rules.required()
+    ]),
+  })
   /**
    * Custom messages for validation failures. You can make use of dot notation `(.)`
    * for targeting nested fields and array expressions `(*)` for targeting all
@@ -36,4 +46,7 @@ export default class FofocaValidator {
    * }
    *
    */
+   public messages: CustomMessages = {
+    required: "0{{field}} é obrigatório para se registrar!!!"
+  }
 }
